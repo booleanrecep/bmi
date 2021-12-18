@@ -1,24 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
-  --item-pd:6px;
-  --item-mr:6px;
-  --item-h:24px;
-  --distance:12px;
-  /* --nav-bg:#ff8300; */
-  --nav-bg:#3d250d;
-  --input-br:1px solid #ff8300;
-
-}
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
-div{
-  margin: 0;
-  padding: 0;
+
+a.active {
+  border: 2px solid #f9c17f;
+  background: #f9c17f;
+}
+
+img {
+  max-width: none;
+}
+#root {
+  width: 95%;
+  margin: 0 auto;
 }

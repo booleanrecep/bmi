@@ -1,17 +1,26 @@
-import { BrowserRouter,Routes, Route } from 'react-router-dom';
-import { BmiForm, BmiNavbar , BmiProgressBar} from './components';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BMIDogForm,
+  BMICatForm,
+  Navigation,
+  BMIModal,
+  Banner,
+} from "./components";
+import { BMIProvider } from "./state/provider";
 
 function App() {
   return (
-    <div className="bmi">
+    <BMIProvider>
       <BrowserRouter>
-        <BmiNavbar/>
+        <Banner />
+        <Navigation />
         <Routes>
-            <Route index  element={<BmiForm/>} />
+          <Route path="/" element={<BMIDogForm />} />
+          <Route path="/cat" element={<BMICatForm />} />
         </Routes>
-        <BmiProgressBar/>
+        <BMIModal />
       </BrowserRouter>
-    </div>
+    </BMIProvider>
   );
 }
 
