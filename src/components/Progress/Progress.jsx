@@ -20,13 +20,19 @@ export const Progress = ({ bmi }) => {
       </div>
       <div className="h-9 w-full  mt-3 flex p-1 ">
         <div className="w-1/3 h-full text-center text-xs text-white bg-red-400 rounded-tl-2xl rounded-bl-2xl">
-          <p className="text-blue-600 mt-7 text-base">Underweight</p>
+          <p className="text-blue-600 mt-7 text-base hidden sm:block">
+            Underweight
+          </p>
         </div>
         <div className="w-1/3 h-full text-center mr-1 ml-1 text-xs text-white bg-green-500">
-          <p className="text-blue-600  mt-7 text-base">Normal</p>
+          <p className="text-blue-600  mt-7 text-base  hidden sm:block">
+            Normal
+          </p>
         </div>
         <div className="w-1/3 h-full text-center text-xs bg-orange-600 rounded-br-2xl rounded-tr-2xl text-white">
-          <p className="text-blue-600  mt-7 text-base">Overweight</p>
+          <p className="text-blue-600  mt-7 text-base  hidden sm:block">
+            Overweight
+          </p>
         </div>
       </div>
     </div>

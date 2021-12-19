@@ -2,7 +2,7 @@ import { Progress } from "..";
 import { Icon } from "../Icon/Icon";
 import catOrange from "../../assets/cat-orange.svg";
 import dogOrange from "../../assets/dog-orange.svg";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { BMIContext } from "../../state/provider";
 
 export const BMIModal = () => {
@@ -16,6 +16,13 @@ export const BMIModal = () => {
   } = useContext(BMIContext);
 
   const icn = formData.pet_type === "DOG" ? dogOrange : catOrange;
+  useEffect(() => {
+    if (isModalOpen) {
+      window.scrollTo(0, 0);
+      document.body.style.overflow = "hidden";
+    }
+    return () => (document.body.style.overflow = "scroll");
+  }, [isModalOpen]);
   return (
     <>
       {isModalOpen ? (

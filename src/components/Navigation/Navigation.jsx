@@ -13,7 +13,7 @@ export const Navigation = () => {
     state: { randomCatInfo },
   } = useContext(BMIContext);
   return (
-    <div className="w-full flex flex-1 px gap-12 mb-6 justify-center">
+    <div className="w-full flex flex-1 flex-col items-center gap-3 sm:flex-row sm:gap-12 mb-6 sm:justify-center">
       <NavItem icon="dog-orange" to="/" title="Dog BMI" />
       <NavItem
         icon="cat-orange"
